@@ -71,6 +71,4 @@ media :-
 
 ## Conclusão
 
-- ## Conclusão
-
 - Em síntese, os paradigmas imperativo e declarativo representam maneiras diferentes de desenvolver soluções computacionais. O paradigma imperativo se concentra na descrição detalhada das etapas que o programa deve seguir, enquanto o declarativo prioriza a definição do resultado desejado e das relações envolvidas. A comparação entre Java e Prolog mostra que, embora ambos possam resolver o mesmo problema, cada linguagem adota uma lógica distinta para chegar à solução. Dessa forma, o estudo desses paradigmas é importante para ampliar a compreensão sobre programação e permitir a escolha da abordagem mais adequada para cada tipo de problema.
