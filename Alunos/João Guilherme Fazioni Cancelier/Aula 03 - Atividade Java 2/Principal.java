@@ -106,7 +106,7 @@ public class Principal {
 		}
 
 		if (comfirmaCompra(precoTot)) {
-			venda.add(new Venda(quant, precoTot));
+			venda.add(new Venda(quant, precoTot, null));
 		}else{
 			precoTot=0;
 		}
