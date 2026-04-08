@@ -1,16 +1,16 @@
  Paradigmas de Programação: Imperativo vs Declarativo
 
-Os paradigmas de programação representam diferentes formas de estruturar e pensar a construção de algoritmos e sistemas. Entre os principais paradigmas estudados, destacam-se o **imperativo** e o **declarativo**, cada um com suas características, vantagens e formas distintas de resolver problemas.
+Os paradigmas de programação representam diferentes formas de estruturar e pensar a construção de algoritmos e sistemas. Entre os principais paradigmas estudados, destacam-se o * e o declarativo, cada um com suas características, vantagens e formas distintas de resolver problemas.
 
    Paradigma Imperativo
 
-O paradigma imperativo é baseado na ideia de descrever **passo a passo** como um problema deve ser resolvido. Nele, o programador especifica explicitamente as instruções que o computador deve executar, controlando o fluxo do programa, variáveis e estados.
+O paradigma imperativo é baseado na ideia de descrever passo a passo como um problema deve ser resolvido. Nele, o programador especifica explicitamente as instruções que o computador deve executar, controlando o fluxo do programa, variáveis e estados.
 
 A linguagem Java é um exemplo clássico desse paradigma. Em Java, o desenvolvedor utiliza estruturas como loops, condicionais e variáveis para manipular dados e alcançar um resultado desejado. Por exemplo, ao calcular a soma de números em uma lista, é necessário criar um laço que percorra os elementos e acumule o resultado em uma variável.
 
    Paradigma Declarativo
 
-Já o paradigma declarativo foca em **o que deve ser feito**, e não em como fazer. Nesse modelo, o programador descreve o problema e as regras envolvidas, enquanto o sistema se encarrega de encontrar a solução.
+Já o paradigma declarativo foca em  que deve ser feito, e não em como fazer. Nesse modelo, o programador descreve o problema e as regras envolvidas, enquanto o sistema se encarrega de encontrar a solução.
 
 Prolog é uma linguagem representativa desse paradigma. Em vez de instruções passo a passo, o programador define fatos e regras. A execução ocorre por meio de consultas, onde o mecanismo lógico da linguagem busca automaticamente as respostas com base no conhecimento fornecido.
 
@@ -18,7 +18,7 @@ Prolog é uma linguagem representativa desse paradigma. Em vez de instruções p
 
 Considere o objetivo de verificar se um número pertence a uma lista.
 
-    Exemplo em Java (Imperativo)
+    Exemplo em java
 
    java
 public class Exemplo {
@@ -35,7 +35,7 @@ public class Exemplo {
 
 Neste código, o processo é explicitamente definido: percorre-se a lista elemento por elemento até encontrar o valor desejado ou chegar ao final.
 
-Exemplo em Prolog (Declarativo)
+Exemplo em Prolog 
 
    prolog
 pertence(X, [X|_]).
