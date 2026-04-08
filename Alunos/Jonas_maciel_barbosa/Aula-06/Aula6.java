@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class Aula06 {
+public class Aula6 {
 	
 	private static Scanner scan = new Scanner(System.in);
 
