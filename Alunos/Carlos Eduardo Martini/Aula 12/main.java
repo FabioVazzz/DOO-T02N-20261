@@ -43,7 +43,13 @@ public class Main {
                 .collect(Collectors.toList());
 
         System.out.println("ATV4: " + prodCaros);
-        
+
+        //ATV5
+        double valorTotal = produto.stream()
+                .mapToDouble(p -> p.getPreco()) 
+                .sum();                         
+                
+        System.out.println("ATV5: R$ " + valorTotal); 
     }
 }
 
