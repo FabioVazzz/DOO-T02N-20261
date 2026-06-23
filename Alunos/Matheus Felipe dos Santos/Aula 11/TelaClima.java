@@ -74,15 +74,15 @@ public class TelaClima extends JFrame {
 
         painelTopo.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
 
-JPanel barraBusca = new JPanel();
+        JPanel barraBusca = new JPanel();
 
-barraBusca.setLayout(new BorderLayout());
+        barraBusca.setLayout(new BorderLayout());
 
-barraBusca.setBackground(Color.WHITE);
+        barraBusca.setBackground(Color.WHITE);
 
-barraBusca.setPreferredSize(new Dimension(420, 55));
+        barraBusca.setPreferredSize(new Dimension(420, 55));
 
-barraBusca.setBorder(
+        barraBusca.setBorder(
         BorderFactory.createCompoundBorder(
                 BorderFactory.createLineBorder(
                         new Color(230, 230, 230),

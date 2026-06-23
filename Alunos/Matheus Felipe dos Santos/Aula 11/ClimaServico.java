@@ -1,7 +1,3 @@
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -18,9 +14,7 @@ public class ClimaServico {
 
         try {
 
-            cidade = URLEncoder.encode(
-                    cidade,
-                    StandardCharsets.UTF_8);
+            cidade = URLEncoder.encode(cidade, StandardCharsets.UTF_8);
 
             String endereco =
                     "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"
@@ -41,77 +35,91 @@ public class ClimaServico {
                             new InputStreamReader(conexao.getInputStream()));
 
             StringBuilder resposta = new StringBuilder();
-
             String linha;
 
             while ((linha = leitor.readLine()) != null) {
-
                 resposta.append(linha);
-
             }
 
             leitor.close();
 
-            JsonObject json =
-                    JsonParser.parseString(resposta.toString())
-                            .getAsJsonObject();
+            String json = resposta.toString();
 
-            JsonArray days = json.getAsJsonArray("days");
-
-            JsonObject hoje = days.get(0).getAsJsonObject();
+            String blocoDia = extrairBlocoDays(json);
 
             Clima clima = new Clima();
 
-            clima.setCidade(
-                    json.get("resolvedAddress").getAsString());
+            clima.setCidade(extrair(json, "\"resolvedAddress\":\""));
 
             clima.setTemperatura(
-                    hoje.get("temp").getAsDouble());
+                    Double.parseDouble(extrair(blocoDia, "\"temp\":"))
+            );
 
             clima.setTempMax(
-                    hoje.get("tempmax").getAsDouble());
+                    Double.parseDouble(extrair(blocoDia, "\"tempmax\":"))
+            );
 
             clima.setTempMin(
-                    hoje.get("tempmin").getAsDouble());
+                    Double.parseDouble(extrair(blocoDia, "\"tempmin\":"))
+            );
 
             clima.setUmidade(
-                    hoje.get("humidity").getAsDouble());
+                    Double.parseDouble(extrair(blocoDia, "\"humidity\":"))
+            );
 
-                String condicao =
-                        hoje.get("conditions").getAsString();
+            clima.setCondicao(extrair(blocoDia, "\"conditions\":\""));
 
-                System.out.println(
-                        "Condição recebida: " + condicao);
+            clima.setPrecipitacao(
+                    Double.parseDouble(extrair(blocoDia, "\"precip\":"))
+            );
 
-                if (hoje.has("icon")) {
-
-                System.out.println(
-                        "Ícone recebido: "
-                                + hoje.get("icon").getAsString());
-
-                }
-
-                clima.setCondicao(condicao);
-
-                clima.setPrecipitacao(
-                        hoje.get("precip").getAsDouble());
-                        
             clima.setVelocidadeVento(
-                    hoje.get("windspeed").getAsDouble());
+                    Double.parseDouble(extrair(blocoDia, "\"windspeed\":"))
+            );
 
             clima.setDirecaoVento(
-                    hoje.get("winddir").getAsDouble());
+                    Double.parseDouble(extrair(blocoDia, "\"winddir\":"))
+            );
 
             return clima;
 
         } catch (Exception e) {
-
             e.printStackTrace();
-
             return null;
-
         }
-
     }
 
+
+    private String extrair(String json, String chave) {
+
+        int inicio = json.indexOf(chave);
+        if (inicio == -1) return "0";
+
+        inicio += chave.length();
+
+        int fimVirgula = json.indexOf(",", inicio);
+        int fimChave = json.indexOf("}", inicio);
+
+        int fim;
+
+        if (fimVirgula == -1) fim = fimChave;
+        else if (fimChave == -1) fim = fimVirgula;
+        else fim = Math.min(fimVirgula, fimChave);
+
+        return json.substring(inicio, fim)
+                .replace("\"", "")
+                .trim();
+    }
+
+
+    private String extrairBlocoDays(String json) {
+
+        int inicioArray = json.indexOf("\"days\":[");
+        if (inicioArray == -1) return json;
+
+        int inicioObj = json.indexOf("{", inicioArray);
+        int fimObj = json.indexOf("}", inicioObj);
+
+        return json.substring(inicioObj, fimObj + 1);
+    }
 }
