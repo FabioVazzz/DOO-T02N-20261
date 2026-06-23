@@ -5,7 +5,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        
         System.out.println("ATV1");
 
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
@@ -16,7 +15,6 @@ public class Main {
 
         System.out.println("Números pares: " + pares);
 
-      
         System.out.println("\nATV2");
 
         List<String> nomes = Arrays.asList("roberto", "josé", "caio", "vinicius");
@@ -27,7 +25,6 @@ public class Main {
 
         System.out.println("Nomes em maiúsculo: " + nomesMaiusculos);
 
-        
         System.out.println("\nATV3");
 
         List<String> palavras = Arrays.asList(
@@ -45,7 +42,6 @@ public class Main {
         contagem.forEach((palavra, quantidade) ->
                 System.out.println(palavra + " = " + quantidade));
 
-      
         System.out.println("\nATV4");
 
         List<Produto> produtos = Arrays.asList(
@@ -62,7 +58,6 @@ public class Main {
         System.out.println("Produtos acima de R$100,00:");
         produtosFiltrados.forEach(System.out::println);
 
-        
         System.out.println("\nATV5");
 
         double somaTotal = produtos.stream()
@@ -70,7 +65,6 @@ public class Main {
                 .sum();
 
         System.out.println("Soma total dos produtos: R$ " + somaTotal);
-
 
         System.out.println("\nATV6");
 
