@@ -1,0 +1,92 @@
+{
+  "name" : "Patrick",
+  "cache" : {
+    "2993" : {
+      "id" : 2993,
+      "name" : "Stranger Things",
+      "language" : "English",
+      "genres" : "Drama, Horror, Science-Fiction",
+      "rating" : 8.4,
+      "status" : "Ended",
+      "premiereDate" : "2016-07-15",
+      "endDate" : "2025-12-31",
+      "network" : "Netflix",
+      "summary" : "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl."
+    },
+    "77573" : {
+      "id" : 77573,
+      "name" : "F1: The Academy",
+      "language" : "English",
+      "genres" : "Sports",
+      "rating" : 0.0,
+      "status" : "Running",
+      "premiereDate" : "2025-05-28",
+      "endDate" : "",
+      "network" : "Netflix",
+      "summary" : "Fifteen young women break barriers in one of the world's most demanding sports as they race to get a female driver back on the Formula 1 grid."
+    },
+    "47876" : {
+      "id" : 47876,
+      "name" : "Batman of Shanghai",
+      "language" : "English",
+      "genres" : "Drama, Action",
+      "rating" : 5.8,
+      "status" : "Ended",
+      "premiereDate" : "2012-07-14",
+      "endDate" : "2012-07-28",
+      "network" : "Cartoon Network",
+      "summary" : "Batman of Shanghai is a series of animated shorts from the DC Nation block on Cartoon Network, presenting a unique re-imagining of the Batman universe in a heavily stylized form, set in a 1930's era Shanghai. The shorts were animated by Wolf Smoke Studios."
+    },
+    "49382" : {
+      "id" : 49382,
+      "name" : "The Witcher: Blood Origin",
+      "language" : "English",
+      "genres" : "Drama, Action, Fantasy",
+      "rating" : 5.4,
+      "status" : "Ended",
+      "premiereDate" : "2022-12-25",
+      "endDate" : "2022-12-25",
+      "network" : "Netflix",
+      "summary" : "In an elven world 1,200 years before Geralt of Rivia, the worlds of monsters, men and elves merge to become one — and the very first Witcher arises."
+    },
+    "19608" : {
+      "id" : 19608,
+      "name" : "Eat-Man",
+      "language" : "Japanese",
+      "genres" : "Action, Adventure, Anime, Science-Fiction",
+      "rating" : 0.0,
+      "status" : "Ended",
+      "premiereDate" : "1997-01-10",
+      "endDate" : "1998-12-24",
+      "network" : "TV Tokyo",
+      "summary" : "Meet Bolt Crank, mercenary extraordinaire, and the man who eats metal! Through his travels, he stops along the way to make a few bucks and occasionally rescue damsels in distress. His taste for metal gives him quite an edge as he becomes capable of generating an assortment of weapons from his hand! It's a strange ability, but it seems to come in handy, so to speak. Bolt has an edge over his adversaries, but will that be enough?(Source: AnimeNfo)"
+    },
+    "74687" : {
+      "id" : 74687,
+      "name" : "Icons Unearthed: Batman",
+      "language" : "English",
+      "genres" : "",
+      "rating" : 0.0,
+      "status" : "Ended",
+      "premiereDate" : "2024-03-20",
+      "endDate" : "2024-04-24",
+      "network" : "Vice TV",
+      "summary" : "The story of the dark knight's journey to the screen fraught with false starts, accidents, big personalities, and endless reinventions."
+    },
+    "975" : {
+      "id" : 975,
+      "name" : "Batman",
+      "language" : "English",
+      "genres" : "Comedy, Action, Adventure",
+      "rating" : 7.8,
+      "status" : "Ended",
+      "premiereDate" : "1966-01-12",
+      "endDate" : "1968-03-14",
+      "network" : "ABC",
+      "summary" : "Wealthy entrepreneur Bruce Wayne and his ward Dick Grayson lead a double life: they are actually crime fighting duo Batman and Robin. A secret Batpole in the Wayne mansion leads to the Batcave, where Police Commissioner Gordon often calls with the latest emergency threatening Gotham City. Racing to the scene of the crime in the Batmobile, Batman and Robin must (with the help of their trusty Bat-utility-belt) thwart the efforts of a variety of master criminals, including Catwoman, Egghead, The Joker, King Tut, The Penguin, and The Riddler."
+    }
+  },
+  "favorites" : [ 2993, 975, 19608, 47876, 74687, 49382 ],
+  "watched" : [ 2993, 975, 47876 ],
+  "wantToWatch" : [ 2993, 77573, 975 ]
+}
